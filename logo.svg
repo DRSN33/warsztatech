@@ -1,8 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 190" fill="none" stroke="#e3a93c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="WARSZTAtech">
-  <!-- kontur auta -->
-  <path d="M20 118 C12 96 28 76 70 68 C86 66 92 62 106 50 C130 28 168 22 202 26 C236 28 262 40 300 52 C326 60 346 62 356 66 C360 80 362 96 354 118 C338 126 322 128 306 128"/>
-  <path d="M20 118 C22 126 40 130 56 130"/>
-  <!-- koło zębate + obwód = warsztat + tech -->
-  <path d="M229.8 80.7 L239.4 83.2 L239.4 96.8 L229.8 99.3 L229.5 100.0 L235.9 107.7 L227.9 118.7 L218.7 115.0 L218.0 115.5 L218.7 125.4 L205.7 129.6 L200.4 121.2 L199.6 121.2 L194.3 129.6 L181.3 125.4 L182.0 115.5 L181.3 115.0 L172.1 118.7 L164.1 107.7 L170.5 100.0 L170.2 99.3 L160.6 96.8 L160.6 83.2 L170.2 80.7 L170.5 80.0 L164.1 72.3 L172.1 61.3 L181.3 65.0 L182.0 64.5 L181.3 54.6 L194.3 50.4 L199.6 58.8 L200.4 58.8 L205.7 50.4 L218.7 54.6 L218.0 64.5 L218.7 65.0 L227.9 61.3 L235.9 72.3 L229.5 80.0Z" stroke-width="4.5"/><circle cx="200" cy="90" r="24.0" stroke-width="3.6"/><g stroke-width="3.4"><path d="M200.0 90.0 L200.0 75.2"/><path d="M200.0 90.0 L208.7 90.0 L214.8 93.5"/><path d="M200.0 90.0 L191.3 90.0 L185.2 93.5"/><path d="M200.0 90.0 L200.0 97.8 L208.7 106.5"/></g><g fill="#e3a93c" stroke="none"><circle class="circuit-dot" cx="214.8" cy="93.5" r="3.7"/><circle class="circuit-dot" cx="185.2" cy="93.5" r="3.7"/><circle class="circuit-dot" cx="208.7" cy="106.5" r="3.7"/><circle class="circuit-dot" cx="200.0" cy="75.2" r="3.7"/></g><circle cx="200" cy="90" r="3.5" fill="#e3a93c" stroke="none"/>
-  <text x="200" y="176" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="40" stroke="none" letter-spacing="1"><tspan fill="#e8edf4">WARSZTA</tspan><tspan fill="#e3a93c">tech</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-label="WarsztaTech">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4d4"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+  </defs>
+  <!-- shield + wrench mark -->
+  <g transform="translate(8,14)">
+    <path d="M46 8 L78 20 L78 52 C78 72 64 88 46 96 C28 88 14 72 14 52 L14 20 Z"
+          fill="none" stroke="url(#g)" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M38 40 L54 40 L58 48 L50 56 L42 48 Z" fill="#2dd4d4"/>
+    <path d="M46 36 L46 62" stroke="#2dd4d4" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="46" cy="36" r="6" fill="#2dd4d4"/>
+  </g>
+  <!-- wordmark -->
+  <text x="110" y="72" font-family="Inter, system-ui, Arial, sans-serif" font-weight="800" font-size="42" letter-spacing="-0.5">
+    <tspan fill="#e8edf4">Warszta</tspan><tspan fill="#2dd4d4">Tech</tspan>
+  </text>
 </svg>
