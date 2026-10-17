@@ -1,271 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WarsztaTech Zawiercie – mobilny mechanik z diagnostyką AI</title>
-  <meta name="description" content="WarsztaTech Zawiercie – mechanik mobilny i stacjonarny. Diagnostyka AI, dojazd do 50 km. Umów wizytę.">
-  <meta name="theme-color" content="#0b1422">
-  <link rel="canonical" href="https://warsztatech.netlify.app/">
-  <link rel="icon" href="logo.svg" type="image/svg+xml">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="WarsztaTech – Prawdziwy Warsztat. Nowoczesna Technologia. Spokojna Głowa.">
-  <meta property="og:description" content="Mobilny i stacjonarny mechanik z diagnostyką wspieraną AI.">
-  <meta property="og:url" content="https://warsztatech.netlify.app/">
-  <meta property="og:locale" content="pl_PL">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { colors: { gold: '#e3a93c', navy: '#0b1422' } } } };
-  </script>
-  <link rel="stylesheet" href="style.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "WarsztaTech",
-    "description": "Mobilny i stacjonarny mechanik samochodowy w Zawierciu z diagnostyką wspieraną AI.",
-    "founder": { "@type": "Person", "name": "Damian Drabek" },
-    "url": "https://warsztatech.netlify.app/",
-    "telephone": "+48664491844",
-    "email": "damiandrabson@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "ul. Źródlana 49",
-      "addressLocality": "Zawiercie",
-      "postalCode": "42-400",
-      "addressCountry": "PL"
-    },
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
-    ]
-  }
-  </script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WarsztaTech — Warsztat samochodowy w Zawierciu</title>
+<meta name="description" content="WarsztaTech Zawiercie — nowy warsztat w przygotowaniu. Wulkanizacja, naprawy bieżące, zawieszenia, rozrządy oraz wymiana oleju i filtrów.">
+<meta name="theme-color" content="#071528">
+<link rel="canonical" href="https://warsztatech.netlify.app/">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#071528;--navy2:#0c2037;--gold:#d8ad61;--goldlight:#f4d99a;--ink:#eff1f3;--muted:#a9b8c8;--border:#d8ad613d}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);color:var(--ink);font-family:Manrope,Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}a:focus-visible,button:focus-visible{outline:2px solid var(--goldlight);outline-offset:4px}.container{width:min(1140px,calc(100% - 44px));margin:auto}.topbar{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}.topbar .logo{display:flex;align-items:center;gap:12px;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:31px;color:var(--goldlight)}.logo img{width:55px;height:55px;object-fit:contain}.links{display:flex;gap:28px;color:#e4e8eb;font-size:13px}.links a:hover,.footer a:hover{color:var(--goldlight)}.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;border:1px solid var(--gold);padding:15px 24px;border-radius:4px;font-size:13px;letter-spacing:.035em;font-weight:800;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn.gold{background:var(--gold);color:#071528}.btn.outline{color:var(--goldlight)}.notice{border-block:1px solid var(--border);background:#d8ad610d;text-align:center;color:var(--goldlight);font-size:12px;padding:13px 20px;letter-spacing:.07em}.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 75% 35%,#1b3855 0%,transparent 42%),linear-gradient(130deg,#071528,#0d243b 70%,#050f1d);border-bottom:1px solid var(--border)}.hero:after{content:"";position:absolute;right:-180px;top:60px;width:670px;height:670px;border:1px solid #d8ad6128;border-radius:50%;pointer-events:none}.hero-inner{min-height:620px;display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center;padding-block:75px 95px;position:relative;z-index:1}.eyebrow{color:var(--gold);font-weight:800;font-size:12px;letter-spacing:.22em;text-transform:uppercase}.hero h1,.section-title,.statement h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:.96;letter-spacing:-.025em}.hero h1{font-size:clamp(58px,6.7vw,102px);margin:24px 0 26px}.hero h1 em{font-style:normal;color:var(--goldlight)}.lead{max-width:560px;color:#bdc8d2;line-height:1.85;font-size:15px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}.hero-art{position:relative;min-height:390px;display:grid;place-items:center}.circle{position:absolute;border:1px solid #d8ad6152;border-radius:50%;width:390px;height:390px;box-shadow:0 0 80px #d8ad610b}.hero-symbol{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(170px,23vw,350px);color:#d8ad6170;font-weight:400;line-height:1}.hero-art small{position:absolute;bottom:5px;letter-spacing:.24em;color:var(--goldlight);font-size:11px;text-transform:uppercase}.stripes{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0,transparent 110px,#ffffff04 111px,#ffffff04 112px);pointer-events:none}.section{padding:100px 0}.section.soft{background:linear-gradient(150deg,#0b2035,#08172a)}.section-title{font-size:clamp(47px,5vw,76px);margin:15px 0 22px}.intro{color:var(--muted);line-height:1.9;max-width:720px;font-size:15px}.goldline{width:75px;height:2px;background:var(--gold);margin:25px 0}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:43px}.service{border:1px solid var(--border);padding:29px;min-height:205px;background:linear-gradient(150deg,#152a4070,#07152870);transition:border-color .2s,transform .2s}.service:hover{border-color:var(--gold);transform:translateY(-3px)}.service .icon{font-size:30px;color:var(--gold);font-family:Georgia,serif}.service h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:29px;font-weight:600;margin:16px 0 9px}.service p{font-size:13px;line-height:1.75;color:var(--muted);margin:0}.split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.statement{border:1px solid var(--border);padding:54px;background:radial-gradient(circle at 90% 10%,#d8ad6110,transparent 65%),#0a1c30}.statement h2{font-size:clamp(48px,5vw,74px);margin:0}.statement h2 span{color:var(--goldlight)}.points{display:grid;gap:23px}.point{display:flex;gap:18px}.point strong{color:var(--gold);font-family:Georgia,serif;font-size:25px;font-weight:400}.point h3{font-size:16px;margin:0 0 7px}.point p{color:var(--muted);line-height:1.8;font-size:13px;margin:0}.contact{display:grid;grid-template-columns:1fr 1fr;gap:70px}.contact-info{display:grid;gap:15px;margin:32px 0}.contact-info div{padding:16px 0;border-bottom:1px solid var(--border);font-size:14px}.contact-info b{display:block;margin-bottom:8px;color:var(--gold);font-size:11px;letter-spacing:.12em;text-transform:uppercase}.contact-info a{text-decoration:underline;text-decoration-color:#d8ad6170;text-underline-offset:5px}.contact-card{padding:45px;border:1px solid var(--border);background:#10263b}.contact-card h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:42px;font-weight:500;margin:0 0 18px}.contact-card p{font-size:14px;color:var(--muted);line-height:1.85}.footer{border-top:1px solid var(--border);padding:33px 0;color:#90a1b3;font-size:12px}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer strong{color:var(--goldlight)}@media(max-width:850px){.links{display:none}.hero-inner{grid-template-columns:1fr;gap:0;min-height:auto;padding-block:65px 55px}.hero-art{min-height:200px}.circle{width:200px;height:200px}.hero-symbol{font-size:180px}.hero-art small{bottom:0}.services{grid-template-columns:repeat(2,1fr)}.split,.contact{grid-template-columns:1fr;gap:25px}}@media(max-width:520px){.topbar{height:72px}.topbar .logo{font-size:26px}.topbar .logo img{width:42px;height:42px}.header-action{display:none}.hero h1{font-size:62px}.hero-art{min-height:165px}.hero-symbol{font-size:155px}.circle{width:160px;height:160px}.section{padding:67px 0}.services{grid-template-columns:1fr}.service{min-height:160px}.statement,.contact-card{padding:28px}.actions .btn{width:100%}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.service{transition:none}}
+</style>
 </head>
-<body class="antialiased">
-
-<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all nav-scrolled">
-  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-    <a href="#top" class="flex items-center gap-2" aria-label="WarsztaTech">
-      <img src="logo.svg" alt="WarsztaTech" class="h-10 w-auto" width="80" height="40">
-    </a>
-    <nav class="hidden md:flex items-center gap-7 text-sm" aria-label="Nawigacja">
-      <a class="nav-link" href="#o-nas">O nas</a>
-      <a class="nav-link" href="#uslugi">Usługi</a>
-      <a class="nav-link" href="#cennik">Cennik</a>
-      <a class="nav-link" href="#kontakt">Kontakt</a>
-    </nav>
-    <a href="#rezerwacja" class="btn btn-primary !py-2 !px-4 text-sm">Umów wizytę</a>
-  </div>
+<body>
+<header class="container topbar">
+<a class="logo" href="#start"><img src="logo.svg" alt="" onerror="this.style.display='none'"><span>WarsztaTech</span></a>
+<nav class="links" aria-label="Nawigacja"><a href="#uslugi">Usługi</a><a href="#o-nas">O nas</a><a href="#kontakt">Kontakt</a></nav>
+<a class="btn outline header-action" href="#kontakt">Dane kontaktowe ↗</a>
 </header>
-
-<main id="top">
-
-<section class="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
-  <div class="absolute inset-0 bg-grid pointer-events-none"></div>
-  <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full pointer-events-none" style="background: radial-gradient(closest-side, rgba(227,169,60,.16), transparent)"></div>
-  <div class="relative max-w-6xl mx-auto px-4">
-    <div class="max-w-2xl">
-      <span class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-gold border border-gold/30 bg-gold/10 rounded-full px-3 py-1.5 mb-6">
-        <i data-lucide="cpu" class="w-3.5 h-3.5"></i> Warsztat + technologia
-      </span>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05]">
-        Naprawy mobilne.<br>
-        <span class="text-gradient">Dojedziemy do Ciebie.</span>
-      </h1>
-      <p class="mt-6 text-lg text-slate-300 max-w-xl">
-        Dojazd, naprawa na miejscu lub w warsztacie. Doświadczenie mechanika + diagnostyka wspierana AI — płacisz za trafną diagnozę, nie za zgadywanie.
-      </p>
-      <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <a href="#rezerwacja" class="btn btn-primary glow-gold"><i data-lucide="calendar-check" class="w-5 h-5"></i> Umów wizytę</a>
-        <a href="tel:+48664491844" class="btn btn-ghost"><i data-lucide="phone" class="w-5 h-5"></i> +48 664 491 844</a>
-      </div>
-      <ul class="mt-10 grid grid-cols-3 gap-4 max-w-md text-sm">
-        <li><strong class="block text-2xl font-display" style="color:var(--gold-2)">0 zł</strong><span class="text-slate-400">dojazd do 15 km</span></li>
-        <li><strong class="block text-2xl font-display" style="color:var(--gold-2)">AI</strong><span class="text-slate-400">diagnostyka</span></li>
-        <li><strong class="block text-2xl font-display" style="color:var(--gold-2)">50 km</strong><span class="text-slate-400">zasięg dojazdu</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="o-nas" class="section-gradient py-20">
-  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
-    <div>
-      <p class="text-gold text-sm uppercase tracking-widest mb-3">O nas</p>
-      <h2 class="text-3xl md:text-4xl font-bold leading-tight">Prawdziwy Warsztat.<br>Nowoczesna Technologia.<br>Spokojna Głowa.</h2>
-      <p class="mt-6 text-slate-300 leading-relaxed">
-        WarsztaTech łączy doświadczenie mechanika z diagnostyką wspieraną AI. Przyjeżdżamy do Ciebie albo przyjmujemy w Zawierciu.
-      </p>
-      <blockquote class="mt-8 border-l-4 border-gold pl-5">
-        <p class="text-xl font-display font-semibold leading-snug">
-          „Nie sprzedajemy wymiany części.<br>
-          <span class="text-gradient">Sprzedajemy pewność, że diagnoza jest trafna.”</span>
-        </p>
-      </blockquote>
-    </div>
-    <div class="grid grid-cols-2 gap-4">
-      <div class="card"><div class="icon-box mb-3"><i data-lucide="brain-circuit" class="w-6 h-6"></i></div><h3 class="font-semibold mb-1">Diagnoza z AI</h3><p class="text-sm text-slate-400">Dane z auta + algorytmy.</p></div>
-      <div class="card"><div class="icon-box mb-3"><i data-lucide="wrench" class="w-6 h-6"></i></div><h3 class="font-semibold mb-1">Mechanik</h3><p class="text-sm text-slate-400">Praktyka, nie tylko program.</p></div>
-      <div class="card"><div class="icon-box mb-3"><i data-lucide="truck" class="w-6 h-6"></i></div><h3 class="font-semibold mb-1">Dojazd</h3><p class="text-sm text-slate-400">Do 50 km · 15 km gratis.</p></div>
-      <div class="card"><div class="icon-box mb-3"><i data-lucide="shield-check" class="w-6 h-6"></i></div><h3 class="font-semibold mb-1">Jasna wycena</h3><p class="text-sm text-slate-400">Zawsze przed naprawą.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="uslugi" class="py-20">
-  <div class="max-w-6xl mx-auto px-4">
-    <p class="text-gold text-sm uppercase tracking-widest mb-3">Usługi</p>
-    <h2 class="text-3xl md:text-4xl font-bold mb-10">Co naprawiamy</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-      <article class="card">
-        <div class="icon-box mb-4"><i data-lucide="cog" class="w-6 h-6"></i></div>
-        <h3 class="font-semibold text-lg mb-2">Silnik i napęd</h3>
-        <p class="text-sm text-slate-400">Rozrząd, sprzęgło, olej, filtry.</p>
-      </article>
-      <article class="card">
-        <div class="icon-box mb-4"><i data-lucide="disc-3" class="w-6 h-6"></i></div>
-        <h3 class="font-semibold text-lg mb-2">Hamulce i zawieszenie</h3>
-        <p class="text-sm text-slate-400">Klocki, tarcze, amortyzatory, tuleje.</p>
-      </article>
-      <article class="card">
-        <div class="icon-box mb-4"><i data-lucide="scan-search" class="w-6 h-6"></i></div>
-        <h3 class="font-semibold text-lg mb-2">Diagnostyka AI / OBD</h3>
-        <p class="text-sm text-slate-400">Błędy, testy, analiza danych.</p>
-      </article>
-      <article class="card">
-        <div class="icon-box mb-4"><i data-lucide="truck" class="w-6 h-6"></i></div>
-        <h3 class="font-semibold text-lg mb-2">Serwis mobilny</h3>
-        <p class="text-sm text-slate-400">Pod dom, firmę, parking. Od 199 zł.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="cennik" class="section-gradient py-20">
-  <div class="max-w-6xl mx-auto px-4">
-    <p class="text-gold text-sm uppercase tracking-widest mb-3">Cennik</p>
-    <h2 class="text-3xl md:text-4xl font-bold mb-3">Orientacyjne ceny</h2>
-    <p class="text-slate-400 mb-8 max-w-xl">Dokładna wycena po diagnozie, zawsze przed rozpoczęciem prac.</p>
-    <div class="grid sm:grid-cols-3 gap-5 max-w-4xl">
-      <div class="card">
-        <h3 class="font-semibold">Diagnostyka komputerowa</h3>
-        <p class="mt-2 text-2xl font-display font-bold" style="color:var(--gold-2)">100–150 zł</p>
-        <p class="mt-2 text-sm text-slate-400">Odczyt i kasowanie błędów.</p>
-      </div>
-      <div class="card">
-        <h3 class="font-semibold">Diagnostyka rozszerzona</h3>
-        <p class="mt-2 text-2xl font-display font-bold" style="color:var(--gold-2)">od 250 zł</p>
-        <p class="mt-2 text-sm text-slate-400">Testy i głębsza analiza.</p>
-      </div>
-      <div class="card">
-        <h3 class="font-semibold">Usługa mobilna</h3>
-        <p class="mt-2 text-2xl font-display font-bold" style="color:var(--gold-2)">od 199 zł</p>
-        <p class="mt-2 text-sm text-slate-400">Dojazd do 15 km gratis.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="rezerwacja" class="py-20">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="card max-w-2xl mx-auto text-center p-10">
-      <p class="text-gold text-sm uppercase tracking-widest mb-3">Rezerwacja</p>
-      <h2 class="text-3xl font-bold mb-4">Umów wizytę w minutę</h2>
-      <p class="text-slate-400 mb-8">Zadzwoń albo napisz na WhatsApp — potwierdzimy termin.</p>
-      <div class="flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="https://wa.me/48664491844?text=Rezerwacja%20WarsztaTech" target="_blank" rel="noopener" class="btn btn-primary glow-gold">
-          <i data-lucide="message-circle" class="w-5 h-5"></i> WhatsApp
-        </a>
-        <a href="tel:+48664491844" class="btn btn-ghost">
-          <i data-lucide="phone" class="w-5 h-5"></i> +48 664 491 844
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="kontakt" class="section-gradient py-20">
-  <div class="max-w-6xl mx-auto px-4">
-    <p class="text-gold text-sm uppercase tracking-widest mb-3">Kontakt</p>
-    <h2 class="text-3xl md:text-4xl font-bold mb-10">Znajdziesz nas tutaj</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <div class="card flex gap-4 items-start">
-        <div class="icon-box shrink-0"><i data-lucide="map-pin" class="w-6 h-6"></i></div>
-        <div>
-          <h3 class="font-semibold">Adres</h3>
-          <p class="text-sm text-slate-400 mt-1">ul. Źródlana 49<br>42-400 Zawiercie</p>
-        </div>
-      </div>
-      <div class="card flex gap-4 items-start">
-        <div class="icon-box shrink-0"><i data-lucide="phone" class="w-6 h-6"></i></div>
-        <div>
-          <h3 class="font-semibold">Telefon / WhatsApp</h3>
-          <p class="text-sm mt-1"><a class="text-gold hover:underline" href="tel:+48664491844">+48 664 491 844</a></p>
-        </div>
-      </div>
-      <div class="card flex gap-4 items-start">
-        <div class="icon-box shrink-0"><i data-lucide="mail" class="w-6 h-6"></i></div>
-        <div>
-          <h3 class="font-semibold">E-mail</h3>
-          <p class="text-sm mt-1"><a class="text-gold hover:underline" href="mailto:damiandrabson@gmail.com">damiandrabson@gmail.com</a></p>
-        </div>
-      </div>
-      <div class="card flex gap-4 items-start">
-        <div class="icon-box shrink-0"><i data-lucide="clock" class="w-6 h-6"></i></div>
-        <div>
-          <h3 class="font-semibold">Godziny</h3>
-          <p class="text-sm text-slate-400 mt-1">Pn–Pt 8:00–18:00<br>Sob 9:00–14:00</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<div class="notice" role="status">NOWY WARSZTAT W ZAWIERCIU — OTWARCIE W PRZYGOTOWANIU · TERMIN PODAMY WKRÓTCE</div>
+<main>
+<section id="start" class="hero"><div class="stripes"></div><div class="container hero-inner">
+<div><p class="eyebrow">WarsztaTech / Zawiercie</p><h1>Nowy warsztat<br><em>po sąsiedzku.</em></h1><div class="goldline"></div><p class="lead">Myślący Serwis. Inteligentne Auto. Spokojna Głowa. Tradycyjna mechanika samochodowa i nowoczesne podejście do diagnostyki — blisko Ciebie.</p><div class="actions"><a class="btn gold" href="#uslugi">Poznaj planowane usługi ↗</a><a class="btn outline" href="#kontakt">Kontakt</a></div></div>
+<div class="hero-art" aria-hidden="true"><div class="circle"></div><div class="hero-symbol">W</div><small>Mechanika · Technologia · Zaufanie</small></div>
+</div></section>
+<section id="uslugi" class="section"><div class="container"><p class="eyebrow">Zakres usług</p><h2 class="section-title">Twój samochód.<br>W dobrych rękach.</h2><p class="intro">Przygotowujemy lokalny serwis samochodowy z pełną obsługą najważniejszych napraw. Poniżej planowany zakres usług — szczegóły oraz terminy udostępnimy po otwarciu.</p>
+<div class="services">
+<article class="service"><span class="icon">◉</span><h3>Wulkanizacja</h3><p>Sezonowa wymiana opon, przekładka i wyważanie kół.</p></article>
+<article class="service"><span class="icon">⚙</span><h3>Rozrządy</h3><p>Wymiana zestawów rozrządu zgodnie z wymaganiami pojazdu.</p></article>
+<article class="service"><span class="icon">✧</span><h3>Zawieszenie</h3><p>Kontrola i naprawa elementów zawieszenia oraz układu jezdnego.</p></article>
+<article class="service"><span class="icon">✣</span><h3>Naprawy bieżące</h3><p>Usterki mechaniczne, hamulce i codzienna obsługa auta.</p></article>
+<article class="service"><span class="icon">◇</span><h3>Serwis okresowy</h3><p>Przeglądy eksploatacyjne i przygotowanie samochodu do sezonu.</p></article>
+<article class="service"><span class="icon">◌</span><h3>Oleje i filtry</h3><p>Wymiany oleju silnikowego i filtrów oraz kontrola płynów.</p></article>
+</div></div></section>
+<section id="o-nas" class="section soft"><div class="container split"><div class="statement"><p class="eyebrow">Nasza filozofia</p><h2>Myślący<br><span>Serwis.</span><br>Spokojna<br>Głowa.</h2></div><div><p class="eyebrow">WarsztaTech</p><h2 class="section-title">Rzemiosło spotyka technologię.</h2><p class="intro">Budujemy warsztat oparty na mechanicznej praktyce, staranności i jasnej komunikacji. Równolegle rozwijamy narzędzia diagnostyczne wspierane AI — technologia ma pomagać mechanikowi, a nie zastępować jego ocenę.</p><div class="goldline"></div><div class="points"><div class="point"><strong>01</strong><div><h3>Lokalnie w Zawierciu</h3><p>Warsztat po sąsiedzku, bez zbędnego dystansu.</p></div></div><div class="point"><strong>02</strong><div><h3>Mechanika przede wszystkim</h3><p>Najpierw rzetelna diagnoza i rozsądny plan naprawy.</p></div></div><div class="point"><strong>03</strong><div><h3>Nowoczesne podejście</h3><p>Rozwijamy cyfrowe wsparcie obsługi i diagnostyki.</p></div></div></div></div></div></section>
+<section id="kontakt" class="section"><div class="container contact"><div><p class="eyebrow">Kontakt</p><h2 class="section-title">Do zobaczenia<br>w Zawierciu.</h2><p class="intro">Trwa przygotowanie warsztatu do otwarcia. Oficjalne godziny, cennik i możliwość umawiania usług ogłosimy, gdy działalność będzie gotowa do rozpoczęcia.</p><div class="contact-info"><div><b>Lokalizacja</b>Zawiercie, ul. Źródlana 49</div><div><b>Strona internetowa</b><a href="https://warsztatech.netlify.app/">warsztatech.netlify.app</a></div></div></div><div class="contact-card"><p class="eyebrow">Wkrótce otwarcie</p><h3>Nowa jakość.<br>Znajoma okolica.</h3><p>Startujemy od serwisu samochodowego i wulkanizacji. Na tej stronie pojawią się szczegóły otwarcia, zakres usług i przyszły system rezerwacji.</p><div class="goldline"></div><p><strong style="color:var(--goldlight)">WarsztaTech</strong><br>Myślący Serwis. Inteligentne Auto. Spokojna Głowa.</p></div></div></section>
 </main>
-
-<footer class="border-t border-white/10 bg-[#080f1a]">
-  <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-10">
-    <div>
-      <img src="logo.svg" alt="WarsztaTech" class="h-12 w-auto" width="100" height="48" loading="lazy">
-      <p class="mt-4 text-sm text-slate-400 max-w-xs">Prawdziwy Warsztat. Nowoczesna Technologia. Spokojna Głowa.</p>
-    </div>
-    <nav>
-      <h3 class="font-semibold mb-3">Nawigacja</h3>
-      <ul class="space-y-2 text-sm text-slate-400">
-        <li><a class="hover:text-gold" href="#uslugi">Usługi</a></li>
-        <li><a class="hover:text-gold" href="#cennik">Cennik</a></li>
-        <li><a class="hover:text-gold" href="#rezerwacja">Rezerwacja</a></li>
-        <li><a class="hover:text-gold" href="#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
-    <div>
-      <h3 class="font-semibold mb-3">Informacje</h3>
-      <ul class="space-y-2 text-sm text-slate-400">
-        <li><a class="hover:text-gold" href="polityka-prywatnosci.html">Polityka prywatności</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="border-t border-white/10 py-5 text-center text-xs text-slate-500">
-    © <span id="year">2026</span> WarsztaTech · Damian Drabek
-  </div>
-</footer>
-
-<a href="https://wa.me/48664491844" target="_blank" rel="noopener" class="fab fixed right-4 bottom-4 z-40 bg-[#25D366] text-white" aria-label="WhatsApp">
-  <i data-lucide="message-circle" class="w-6 h-6"></i>
-</a>
-<button id="toTop" class="fab z-40 bg-gold text-[#1a1205]" aria-label="Wróć na górę" type="button">
-  <i data-lucide="arrow-up" class="w-6 h-6"></i>
-</button>
-
-<script src="https://unpkg.com/lucide@latest"></script>
-<script src="script.js" defer></script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  if (window.lucide) lucide.createIcons();
-</script>
-</body>
-</html>
+<footer class="footer"><div class="container footer-inner"><strong>WarsztaTech · Zawiercie</strong><span>© <span id="year">2026</span> · Strona informacyjna, otwarcie w przygotowaniu.</span><a href="polityka-prywatnosci.html">Polityka prywatności</a></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
