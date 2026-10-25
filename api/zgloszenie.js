@@ -12,7 +12,7 @@ export default async function handler(req,res) {
   if(safe(b.website,100)) return res.status(200).json({ok:true});
   const name=safe(b.name,80),phone=safe(b.phone,30),car=safe(b.vehicle,120),issue=safe(b.issue,1200);
   const token=safe(b.turnstileToken,2048);
-  if(!name || !/^\\+?[0-9 ()-]{9,22}$/.test(phone) || !car || issue.length<10 || !b.consent || !token) return res.status(400).json({error:'invalid_fields'});
+  if(!name || !/^[+]?[0-9 ()-]{9,22}$/.test(phone) || !car || issue.length<10 || !b.consent || !token) return res.status(400).json({error:'invalid_fields'});
   try {
     const verify=await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({secret:process.env.TURNSTILE_SECRET_KEY,response:token})});
     const verdict=await verify.json();
