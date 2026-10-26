@@ -39,3 +39,8 @@ Status: produkcyjny release wstrzymany do spełnienia powyższych warunków. Nie
 - Polityka prywatności pozostaje szablonem. Poproszono o potwierdzenie danych administratora i retencji; nie opublikowano niepotwierdzonych ustaleń.
 - Testy lokalne: 31/31. Dodatkowa blokada publicznego config i zapisu na produkcji przy kluczach testowych.
 - Produkcja nieopublikowana: warunek udanego E2E nie został spełniony. Make i kartoteki klientów bez zmian.
+
+## Potwierdzenie właściciela — polityka prywatności
+26.10.2026 właściciel potwierdził: Damian Drabek / WarsztatTech, ul. Owocowa 7, Zawiercie, damiandrabson@gmail.com i maksymalnie 6 miesięcy dla zgłoszeń bez dalszej współpracy. Politykę uzupełniono o rzeczywiste pola i przepływ Vercel → weryfikacja Turnstile → Notion, prawa i dane techniczne. Nie jest to potwierdzenie automatycznego usuwania po 6 miesiącach; retencja wymaga przeglądu przez administratora. Istniejących danych nie usuwano.
+Limit Firewall przetestowano pustymi żądaniami bez danych klientów: pierwsze 5 otrzymało 404 (brak endpointu na dotychczasowej produkcji), szóste 403 z warstwy ochronnej.
+Ponowne sprawdzenie metadanych Vercel: nadal brak TURNSTILE_SITE_KEY dla production. Dostęp serwerowej integracji Notion nadal wymaga naprawy; nie ponawiano tworzenia rekordu bez potwierdzonej zmiany uprawnień.
