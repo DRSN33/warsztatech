@@ -44,3 +44,10 @@ Status: produkcyjny release wstrzymany do spełnienia powyższych warunków. Nie
 26.10.2026 właściciel potwierdził: Damian Drabek / WarsztatTech, ul. Owocowa 7, Zawiercie, damiandrabson@gmail.com i maksymalnie 6 miesięcy dla zgłoszeń bez dalszej współpracy. Politykę uzupełniono o rzeczywiste pola i przepływ Vercel → weryfikacja Turnstile → Notion, prawa i dane techniczne. Nie jest to potwierdzenie automatycznego usuwania po 6 miesiącach; retencja wymaga przeglądu przez administratora. Istniejących danych nie usuwano.
 Limit Firewall przetestowano pustymi żądaniami bez danych klientów: pierwsze 5 otrzymało 404 (brak endpointu na dotychczasowej produkcji), szóste 403 z warstwy ochronnej.
 Ponowne sprawdzenie metadanych Vercel: nadal brak TURNSTILE_SITE_KEY dla production. Dostęp serwerowej integracji Notion nadal wymaga naprawy; nie ponawiano tworzenia rekordu bez potwierdzonej zmiany uprawnień.
+
+## Audyt 27.10.2026 — E2E po podłączeniu Vercel
+- Właściciel podłączył połączenie Vercel do bazy „Zgłoszenia WWW” i pozostawił wymagane capability: Read content, Update content i Insert content.
+- Preview `warsztatech-2bgc3i0wq-drsn1.vercel.app`: formularz przesłał jeden syntetyczny rekord `TEST WWW NOTION 2026-10-26T23:11:04.372Z`; odpowiedź UI: przyjęto zgłoszenie.
+- Weryfikacja Notion potwierdziła dokładnie jeden rekord w źródle `ffed7123-d3cc-46ab-8a2c-794e5d20d86c`, rodzic bazy `f35fde2d-57cd-4600-aef6-e00a4bc8bb08`, status `Nowe`, źródło `WWW`, zgoda `true`. Rekordu nie usuwano.
+- Preview nadal korzysta z oficjalnego testowego klucza Turnstile. Nie skopiowano go do produkcji; omyłkowo dodaną pustą zmienną produkcyjną wyczyszczono.
+- Produkcja pozostaje nieopublikowana: brak prawdziwego `TURNSTILE_SITE_KEY` dla `warsztatech.vercel.app`. Make i dane klientów bez zmian.
