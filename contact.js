@@ -4,6 +4,7 @@
   const status=document.getElementById('wt-status');
   let token='',widgetId,busy=false;
   const show=message=>{status.textContent=message;};
+  const unavailable='Formularz chwilowo niedostępny — możesz napisać przez WhatsApp lub zadzwonić. Nie wysyłaj zgłoszenia ponownie, jeśli nie masz pewności, czy zostało przyjęte.';
   const ready=value=>{token=value;button.disabled=busy || !value;};
   button.disabled=true;
   window.wtTurnstileReady=async()=>{
@@ -13,14 +14,15 @@
       const config=await response.json();
       widgetId=window.turnstile.render('#wt-turnstile',{
         sitekey:config.siteKey,action:'zgloszenie',theme:'dark',callback:ready,
-        'expired-callback':()=>ready(''),'error-callback':()=>{ready('');show('Weryfikacja niedostępna. Spróbuj ponownie lub zadzwoń.');}
+        'expired-callback':()=>ready(''),'error-callback':()=>{ready('');show(unavailable);}
       });
       show('');
-    } catch {show('Formularz jest chwilowo niedostępny. Zadzwoń: 664 491 844 lub napisz przez WhatsApp.');}
+    } catch {show(unavailable);}
   };
   form.addEventListener('submit',async event=>{
     event.preventDefault();
-    if(busy || !token || !form.reportValidity()) return;
+    if(busy || !form.reportValidity()) return;
+    if(!token){show('Potwierdź weryfikację antyspamową. Jeśli nie działa, napisz przez WhatsApp lub zadzwoń.');return;}
     busy=true;button.disabled=true;
     show('Wysyłanie zgłoszenia…');
     const value=id=>document.getElementById(id).value.trim();
@@ -44,6 +46,6 @@
   const script=document.createElement('script');
   script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?onload=wtTurnstileReady&render=explicit';
   script.async=true;script.defer=true;
-  script.onerror=()=>show('Weryfikacja niedostępna. Zadzwoń: 664 491 844.');
+  script.onerror=()=>{ready('');show(unavailable);};
   document.head.appendChild(script);
 })();
